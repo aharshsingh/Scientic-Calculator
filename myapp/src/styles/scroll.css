@@ -1,0 +1,7 @@
+.overflow-x-auto {
+    overflow-x: auto;
+  }
+  
+  .overflow-x-auto::-webkit-scrollbar {
+    display: none;
+  }
