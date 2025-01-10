@@ -2,11 +2,11 @@ import React, {useContext} from 'react'
 import { CalculatorContext } from '../context/CalculatorContext';
 export default function Display() {
 const {expression, result, currVal} = useContext(CalculatorContext);
-const displayValue = expression
-? String(expression)
-: currVal
-? String(currVal)
-: String(result);
+ const displayValue = expression
+    ? String(expression)
+    : currVal
+    ? String(currVal)
+    : String(result);
   return (
     <div>
       <div className='bg-[#414141] w-full sm:w-[398px] md:w-[598px] lg:w-[886px] h-[130px]  transition-all duration-300 ease-in-out rounded-tr-lg rounded-tl-lg'>
