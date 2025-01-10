@@ -16,7 +16,7 @@ export default function Simpleops() {
       }
   return (
     <div>
-      <div className='w-full sm:w-[154px] md:w-[232px] lg:w-[352px] h-[377px] rounded-br-lg bg-[#414141] transition-all duration-300 ease-in-out'>
+      <div className='w-full sm:w-[159px] md:w-[239px] lg:w-[352px] h-[377px] rounded-br-lg bg-[#414141] transition-all duration-300 ease-in-out'>
         <div className='flex col-span-4'>
             <Button text={"C"} />
             <Button text={"+/-"} />
@@ -43,11 +43,11 @@ export default function Simpleops() {
         </div>
         <div className='flex'>
           <div>
-          <button className='w-[176px] h-[73.6px] text-white text-3xl bg-[#73736e] m-[1px]' onClick={()=> handleClick('0')}>0</button>
+          <button className='h-[73.6px] sm:w-[78px] md:w-[118px] lg:w-[176px] text-white sm:text-base md:text-xl text-3xl bg-[#73736e] m-[1px]' onClick={()=> handleClick('0')}>0</button>
           </div>
             <LitterButton text={"."} />
             <div>
-            <button className='bg-[#f0a042] w-[87px] h-[73.6px] text-white text-3xl rounded-br-lg m-[1px]' onClick={()=> handleAnswer('=')}>=</button>
+            <button className='bg-[#f0a042] h-[73.6px] sm:w-[37px] md:w-[59px] lg:w-[87px] text-white sm:text-base text-3xl rounded-br-lg m-[1px]' onClick={()=> handleAnswer('=')}>=</button>
             </div>
         </div>
       </div>

@@ -4,9 +4,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      width: {
-        '124': '56.25rem', 
-        '115': '37.5rem'
+      screens: {
+        'sm': '400px',
+        'md': '768px',
+        'lg': '1024px'
       },
     },
   },

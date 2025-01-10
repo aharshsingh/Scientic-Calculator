@@ -13,7 +13,7 @@ export default function Complexops() {
     }
   return (
     <div>
-      <div className='w-full sm:w-[216px] md:w-[338px] lg:w-[533px] h-[377px] bg-[#414141] rounded-bl-lg transition-all duration-300 ease-in-out '>
+      <div className='w-full sm:w-[240px] md:w-[358px] lg:w-[533px] h-[377px] bg-[#414141] rounded-bl-lg transition-all duration-300 ease-in-out '>
         <div>
             <div className='flex col-span-6'>
                 <Button text={"("}/>
@@ -49,7 +49,7 @@ export default function Complexops() {
             </div>
             <div className='flex col-span-6'>
                 <div>
-                <button className='bg-[#555555] w-[87px] h-[73.6px] text-white text-3xl ml-[1px] mt-[1px] mr-[1px] rounded-bl-lg' onClick={()=> handleClick()}>{angleState}</button>
+                <button className='bg-[#555555] h-[73.6px] sm:w-[38px] md:w-[58px] lg:w-[87px] text-white sm:text-base md:text-xl text-3xl ml-[1px] mt-[1px] mr-[1px] rounded-bl-lg' onClick={()=> handleClick()}>{angleState}</button>
                 </div>
                 <Button text={"sinh"}/>
                 <Button text={"cosh"}/>
