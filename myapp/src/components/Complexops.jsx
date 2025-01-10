@@ -25,19 +25,19 @@ export default function Complexops() {
             </div>
             <div className='flex col-span-6'>
                 <Button text={<><span>2</span><sup className='text-base'>nd</sup></>}/>
-                <Button text={<><span>x</span><sup className='text-base'>2</sup></>}/>
-                <Button text={<><span>x</span><sup className='text-base'>3</sup></>}/>
+                <Button text={<><span>x</span><sup className='text-base'>2</sup></>} id={"x2"}/>
+                <Button text={<><span>x</span><sup className='text-base'>3</sup></>} id={"x3"}/>
                 <Button text={<><span>x</span><sup className='text-base'>y</sup></>}/>
-                <Button text={<><span>e</span><sup className='text-base'>x</sup></>}/>
-                <Button text={<><span>10</span><sup className='text-l'>x</sup></>}/>
+                <Button text={<><span>e</span><sup className='text-base'>x</sup></>} id={"ex"}/>
+                <Button text={<><span>10</span><sup className='text-l'>x</sup></>} id={"10x"}/>
             </div>
             <div className='flex col-span-6'>
                 <Button text={"1/x"}/>
-                <Button text={<><sup className='text-base'>2</sup><span>√x</span></>}/>
-                <Button text={<><sup className='text-base'>3</sup><span>√x</span></>}/>
+                <Button text={<><sup className='text-base'>2</sup><span>√x</span></>} id={"2rx"}/>
+                <Button text={<><sup className='text-base'>3</sup><span>√x</span></>} id={"3rx"}/>
                 <Button text={<><sup className='text-base'>y</sup><span>√x</span></>}/>
                 <Button text={"ln"}/>
-                <Button text={<><span>log</span><sub className='text-sm'>10</sub></>}/>
+                <Button text={<><span>log</span><sub className='text-sm'>10</sub></>} id={"log10"}/>
             </div>
             <div className='flex col-span-6'>
                 <Button text={"x!"}/>
