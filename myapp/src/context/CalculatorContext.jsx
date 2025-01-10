@@ -9,6 +9,7 @@ export const CalculatorProvider = ({children})=>{
     const [angleState, setAngleState] = useState('Rad');
     const [memory, setMemory] = useState('');
     const [currVal, setCurrVal] = useState('0');
+    const [xry, setXry] = useState(false);
 
     const math = create(all);
 
@@ -58,14 +59,24 @@ export const CalculatorProvider = ({children})=>{
     }
 
     const evaluateExpression = ()=>{
+      if (angleState === 'Deg') {
+        math.config({ angleUnit: 'degree' });
+      } else {
+        math.config({ angleUnit: 'radian' });
+      }
+
+      try {
         const answer = math.evaluate(expression);
         setResult(String(answer));
         setCurrVal(String(answer));
         setExpression('');
+      } catch (error) {
+        console.error('Error evaluating expression:', error);
+      }
     }
 
     return (
-        <CalculatorContext.Provider value={{ expression, result, setExpression, setResult, evaluateExpression, angleState, setAngleState, AddToMemory, SubToMemory, ClearMemory, RecallMemory, setCurrVal }}>
+        <CalculatorContext.Provider value={{ expression, result, setExpression, setResult, evaluateExpression, angleState, setAngleState, AddToMemory, SubToMemory, ClearMemory, RecallMemory, setCurrVal, setXry, xry }}>
           {children}
         </CalculatorContext.Provider>
       );

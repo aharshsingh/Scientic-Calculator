@@ -7,16 +7,17 @@ import Confetti from 'react-confetti';
 
 export default function Calculator() {
   const [showConfetti, setShowConfetti] = useState(false);
-  const { expression, setExpression, setCurrVal, setResult } = useContext(CalculatorContext);
+  const { expression, setExpression, setCurrVal, setResult, setXry } = useContext(CalculatorContext);
 
   useEffect(() => {
-    if (expression && (expression.includes('99') || expression.includes('33'))) {
+    if (expression && (expression.includes('99') && expression.includes('33'))) {
       console.log('Explosion triggered!');
       setShowConfetti(true);
       setTimeout(() => setShowConfetti(false), 2000);
       setExpression('');
       setCurrVal('');
       setResult('');
+      setXry(false);
     }
   }, [expression]);
 

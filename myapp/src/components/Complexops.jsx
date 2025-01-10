@@ -3,13 +3,16 @@ import Button from './Button';
 import { CalculatorContext } from '../context/CalculatorContext';
 
 export default function Complexops() {
-    const {angleState, setAngleState} = useContext(CalculatorContext);
+    const {angleState, setAngleState, setXry} = useContext(CalculatorContext);
     const handleClick = ()=>{
         console.log('Current angleState:', angleState);
         if(angleState === 'Rad')
             setAngleState('Deg');
         else
             setAngleState('Rad')
+    }
+    const toggleXry = ()=>{
+        setXry(true);
     }
   return (
     <div>
@@ -24,10 +27,10 @@ export default function Complexops() {
                 <Button text={"mr"}/>
             </div>
             <div className='flex col-span-6'>
-                <Button text={<><span>2</span><sup className='text-base'>nd</sup></>}/>
+                <Button text={<><span>2</span><sup className='text-base'>nd</sup></>} id={"2nd"}/>
                 <Button text={<><span>x</span><sup className='text-base'>2</sup></>} id={"x2"}/>
                 <Button text={<><span>x</span><sup className='text-base'>3</sup></>} id={"x3"}/>
-                <Button text={<><span>x</span><sup className='text-base'>y</sup></>}/>
+                <Button text={<><span>x</span><sup className='text-base'>y</sup></>} id={"xy"}/>
                 <Button text={<><span>e</span><sup className='text-base'>x</sup></>} id={"ex"}/>
                 <Button text={<><span>10</span><sup className='text-l'>x</sup></>} id={"10x"}/>
             </div>
@@ -35,7 +38,9 @@ export default function Complexops() {
                 <Button text={"1/x"}/>
                 <Button text={<><sup className='text-base'>2</sup><span>√x</span></>} id={"2rx"}/>
                 <Button text={<><sup className='text-base'>3</sup><span>√x</span></>} id={"3rx"}/>
-                <Button text={<><sup className='text-base'>y</sup><span>√x</span></>}/>
+                <div onClick={()=> toggleXry()}>
+                    <Button text={<><sup className='text-base'>y</sup><span>√x</span></>} id={"yrx"}/>
+                </div>
                 <Button text={"ln"}/>
                 <Button text={<><span>log</span><sub className='text-sm'>10</sub></>} id={"log10"}/>
             </div>

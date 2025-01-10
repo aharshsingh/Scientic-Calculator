@@ -4,7 +4,7 @@ import Button from './Button';
 import ColorButton from './ColorButton';
 import LitterButton from './LitterButton';
 export default function Simpleops() {
-      const {setExpression, evaluateExpression} = useContext(CalculatorContext);
+      const {setExpression, evaluateExpression, setXry} = useContext(CalculatorContext);
       const handleClick = (text) =>{
           setExpression((prevExpression) =>{
               return prevExpression + text;
@@ -13,13 +13,14 @@ export default function Simpleops() {
 
       const handleAnswer = ()=>{
         evaluateExpression();
+        setXry(false);
       }
   return (
     <div>
       <div className='w-full sm:w-[159px] md:w-[239px] lg:w-[352px] h-[377px] rounded-br-lg bg-[#414141] transition-all duration-300 ease-in-out'>
         <div className='flex col-span-4'>
             <Button text={"C"} />
-            <Button text={"+/-"} />
+            <Button text={"+/-"} id={"+-"}/>
             <Button text={"%"} />
             <ColorButton text={"/"} />
         </div>

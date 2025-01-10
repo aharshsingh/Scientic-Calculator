@@ -105,6 +105,21 @@ export default function Button({text, id}) {
             setCurrVal(text); 
             setExpression('');
             return;
+        }else if(id === "xy"){
+            text = "^"
+        }else if(id === '+-'){
+            const currentValue = parseFloat(result);
+            text = -currentValue;
+            setResult(text); 
+            setCurrVal(text); 
+            setExpression('');
+            return;
+        }else if(id === '2nd'){
+            return;
+        }else if(text === 'EE'){
+            text = 'e'
+        }else if(id === 'yrx'){
+            text = "^";
         }
         setExpression((prevExpression) =>{
             return prevExpression + text;
