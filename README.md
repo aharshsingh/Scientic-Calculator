@@ -53,7 +53,7 @@ A feature-rich scientific calculator that allows you to perform basic arithmetic
 
 You can try the live version of the calculator here:
 
-[Scientific Calculator](https://your-deployed-link.com)
+[Scientific Calculator](https://scientificcalulator.netlify.app/)
 
 ## Technologies Used
 
@@ -67,7 +67,7 @@ You can try the live version of the calculator here:
 ## Installation
 
 ####  1. Clone the repository
-  git clone https://github.com/yourusername/scientific-calculator.git
+  git clone https://github.com/aharshsingh/Scientic-Calculator
 
 #### 2. Navigate into the project directory
   cd scientific-calculator
